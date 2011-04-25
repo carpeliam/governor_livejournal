@@ -1,6 +1,39 @@
 = governor_livejournal
 
-Description goes here.
+<b>Governor[http://carpeliam.github.com/governor/]</b> (named after Rod
+Blagojevich) is the pluggable blogging platform for Rails, built for people
+who want to build their blog into their website, not build their website into
+their blog.
+
+*governor_livejournal* is a plugin for Governor, allowing you to cross-post your
+articles to LiveJournal[http://www.livejournal.com].
+
+== Dependencies
+
+* Governor[http://carpeliam.github.com/governor/]
+* GovernorBackground[https://github.com/carpeliam/governor_background]
+* The livejournal[https://github.com/carpeliam/livejournal] gem (my fork fixes
+  a small bug, hopefully soon you'll be able to use the main repo)
+* And because of the GovernorBackground dependency, either
+  Delayed_Job[https://github.com/collectiveidea/delayed_job] or
+  Resque[https://github.com/defunkt/resque]. If you use Resque, it's highly
+  recommended that you use
+  resque-status[https://github.com/quirkey/resque-status] as well.
+
+== Setting up
+
+First, install the above dependencies. Then, in your Gemfile, add the
+following:
+
+    gem 'governor_livejournal'
+
+Once you've installed the gem into your app, you need to run the generator:
+
+    rails generate governor:add_livejournal [RESOURCE]
+
+This will add a migration for associating articles to livejournal posts as
+well as an initializer in which you'll need to set your username and password
+for livejournal.
 
 == Contributing to governor_livejournal
  
