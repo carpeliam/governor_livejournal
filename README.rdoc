@@ -12,8 +12,7 @@ articles to LiveJournal[http://www.livejournal.com].
 
 * Governor[http://carpeliam.github.com/governor/]
 * GovernorBackground[https://github.com/carpeliam/governor_background]
-* The livejournal[https://github.com/carpeliam/livejournal] gem (my fork fixes
-  a small bug, hopefully soon you'll be able to use the main repo)
+* The livejournal[https://github.com/carpeliam/livejournal] gem
 * And because of the GovernorBackground dependency, either
   Delayed_Job[https://github.com/collectiveidea/delayed_job] or
   Resque[https://github.com/defunkt/resque]. If you use Resque, it's highly
