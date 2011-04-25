@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "governor_livejournal"
   gem.homepage = "http://github.com/carpeliam/governor_livejournal"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A plugin that connects Governor with a LiveJournal account.}
+  gem.description = %Q{A plugin for the Rails 3-based Governor blogging system that posts and updates articles to LiveJournal.com.}
   gem.email = "liam@carpeliam.com"
   gem.authors = ["Liam Morley"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

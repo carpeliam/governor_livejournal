@@ -1,0 +1,5 @@
+en:
+  governor_background:
+    post_to_livejournal_completed: '"%{resource}" was completed successfully.'
+    post_to_livejournal_failed: '"%{resource}" could not be created: %{message}.'
+    post_to_livejournal_killed: '"%{resource}" was interrupted: %{message}.'
