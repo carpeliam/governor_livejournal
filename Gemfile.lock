@@ -1,7 +1,7 @@
 PATH
   remote: ./
   specs:
-    governor_livejournal (0.1.0)
+    governor_livejournal (0.2.0)
       governor
       governor_background
       livejournal

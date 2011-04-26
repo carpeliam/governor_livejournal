@@ -1,3 +1,4 @@
+require 'livejournal'
 module GovernorLivejournal
   module InstanceMethods
     def post_to_livejournal
@@ -45,7 +46,7 @@ module GovernorLivejournal
       entry.event = Governor::Formatters.format_article self
       entry.time = LiveJournal::coerce_gmt(self.created_at.present? ? self.created_at : Time.now)
       entry.preformatted = false
-      # entry.security = @@security[article.lj_security]
+      entry.security = livejournal_security.to_sym
       entry
     end
   end

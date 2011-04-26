@@ -1,0 +1,9 @@
+<p>
+  <b>Include in LiveJournal?</b>
+  <%= f.check_box :is_livejournal %>
+</p>
+
+<p>
+  <b>Security level</b><br/>
+  <%= f.select :livejournal_security, %w(public friends private) %>
+</p>
