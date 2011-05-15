@@ -10,7 +10,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'delayed_job'
 gem 'governor'
-gem 'governor_background'
+gem 'governor_background', '0.3.0'
 gem 'governor_livejournal', :path => '../..'
 
 gem 'dynamic_form'

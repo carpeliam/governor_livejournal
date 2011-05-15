@@ -34,3 +34,10 @@ module Governor
     end
   end
 end
+
+# get GovernorBackground to run jobs directly
+module GovernorBackground
+  def self.run(job_name, *arguments)
+    retrieve(job_name).call(*arguments)
+  end
+end

@@ -1,4 +1,5 @@
 require 'governor_livejournal/rails'
+require 'governor_livejournal/livejournal'
 require 'governor_livejournal/instance_methods'
 
 livejournal = Governor::Plugin.new('livejournal')
@@ -16,6 +17,21 @@ end
 livejournal.register_partial :bottom_of_form, 'articles/livejournal_form'
 
 Governor::PluginManager.register livejournal
+
+GovernorBackground.register('livejournal_post') do |article|
+  lj = GovernorLivejournal::Livejournal.new(article)
+  id = if article.livejournal_id.blank?
+    lj.post
+  else
+    lj.put
+  end
+  article.reload.update_attribute :livejournal_id, id
+end
+
+GovernorBackground.register('livejournal_delete') do |livejournal_id|
+  lj = GovernorLivejournal::Livejournal.new(livejournal_id)
+  lj.delete
+end
 
 module GovernorLivejournal
   class Configuration

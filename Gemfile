@@ -8,7 +8,7 @@ source "http://rubygems.org"
 
 gem 'livejournal'
 gem 'governor'
-gem 'governor_background'
+gem 'governor_background', '>= 0.3.0'
 
 group :development, :test do
   gem 'jeweler', '~> 1.5.2'

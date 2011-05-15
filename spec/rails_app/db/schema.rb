@@ -15,12 +15,14 @@ ActiveRecord::Schema.define(:version => 20110425023749) do
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "format",         :default => "default"
+    t.string   "format",               :default => "default"
     t.text     "post"
     t.integer  "author_id"
     t.string   "author_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_livejournal"
+    t.string   "livejournal_security", :default => "public"
     t.integer  "livejournal_id"
   end
 

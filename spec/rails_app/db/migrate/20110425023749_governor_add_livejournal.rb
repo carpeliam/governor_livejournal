@@ -1,9 +1,17 @@
 class GovernorAddLivejournal < ActiveRecord::Migration
   def self.up
-    add_column :articles, :livejournal_id, :integer
+    change_table :articles do |t|
+      t.boolean :is_livejournal
+      t.string :livejournal_security, :default => 'public'
+      t.references :livejournal
+    end
   end
 
   def self.down
-    remove_column :articles, :livejournal_id
+    change_table :articles do |t|
+      t.remove :is_livejournal
+      t.remove :livejournal_security
+      t.remove :livejournal_id
+    end
   end
 end

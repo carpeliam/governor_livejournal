@@ -1,2 +1,2 @@
-GovernorLivejournal.config.username = ''
-GovernorLivejournal.config.password = ''
+GovernorLivejournal.config.username = 'user'
+GovernorLivejournal.config.password = 'password'
