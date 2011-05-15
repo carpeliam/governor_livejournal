@@ -1,9 +1,9 @@
 PATH
   remote: ../..
   specs:
-    governor_livejournal (0.2.0)
+    governor_livejournal (0.2.1)
       governor
-      governor_background
+      governor_background (>= 0.3.0)
       livejournal
 
 GEM
