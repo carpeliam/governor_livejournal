@@ -24,6 +24,12 @@ articles to LiveJournal[http://www.livejournal.com].
 First, install the above dependencies. Then, in your Gemfile, add the
 following:
 
+    gem 'governor'
+    gem 'livejournal'
+    gem 'governor_background'
+    # gem 'delayed_job'                                # if you're using delayed_job
+    # gem 'resque', :require => 'resque/server'        # if you're using resque
+    # gem 'resque-status', :require => 'resque/status' # recommended if you're using resque
     gem 'governor_livejournal'
 
 Once you've installed the gem into your app, you need to run the generator:
