@@ -21,8 +21,7 @@ articles to LiveJournal[http://www.livejournal.com].
 
 == Setting up
 
-First, install the above dependencies. Then, in your Gemfile, add the
-following:
+In your Gemfile, add the following:
 
     gem 'governor'
     gem 'livejournal'
